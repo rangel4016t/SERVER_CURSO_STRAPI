@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empandas",
+  "info": {
+    "singularName": "empanda",
+    "pluralName": "empandas",
+    "displayName": "EMPANDA",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "GUISO": {
+      "type": "string"
+    },
+    "Precio": {
+      "type": "decimal"
+    },
+    "compras": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::compra.compra",
+      "inversedBy": "empandas"
+    },
+    "CANTIDAD": {
+      "type": "integer"
+    }
+  }
+}

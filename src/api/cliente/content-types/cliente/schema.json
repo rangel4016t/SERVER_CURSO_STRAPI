@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "CLIENTE"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Apellido": {
+      "type": "string"
+    },
+    "Correo": {
+      "type": "email"
+    },
+    "Numero": {
+      "type": "integer"
+    },
+    "compras": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::compra.compra",
+      "mappedBy": "cliente"
+    }
+  }
+}
