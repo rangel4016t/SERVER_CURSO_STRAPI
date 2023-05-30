@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * empanda controller
+ * pedido controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::empanda.empanda');
+module.exports = createCoreController('api::pedido.pedido');

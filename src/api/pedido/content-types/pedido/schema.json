@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedidos",
+  "info": {
+    "singularName": "pedido",
+    "pluralName": "pedidos",
+    "displayName": "PEDIDOS"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cliente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cliente.cliente"
+    },
+    "fecha_pedido": {
+      "type": "date",
+      "required": true
+    },
+    "direccion_entrega": {
+      "type": "string",
+      "required": true
+    },
+    "telefono_entrega": {
+      "type": "string",
+      "required": true
+    },
+    "estado_pedido": {
+      "type": "enumeration",
+      "enum": [
+        "pendiente",
+        "en proceso",
+        "entregado"
+      ],
+      "default": "pendiente",
+      "required": true
+    }
+  }
+}

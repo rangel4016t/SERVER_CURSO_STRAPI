@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * empanda service
+ * pedido service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::empanda.empanda');
+module.exports = createCoreService('api::pedido.pedido');
