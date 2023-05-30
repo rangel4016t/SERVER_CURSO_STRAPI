@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empanadas",
+  "info": {
+    "singularName": "empanada",
+    "pluralName": "empanadas",
+    "displayName": "EMPANADA",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "string",
+      "required": true
+    },
+    "precio": {
+      "type": "decimal",
+      "required": true,
+      "default": 1
+    },
+    "detalle_pedido": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::detalle-pedido.detalle-pedido",
+      "inversedBy": "id_empanadas"
+    }
+  }
+}

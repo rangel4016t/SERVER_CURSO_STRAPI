@@ -4,30 +4,34 @@
   "info": {
     "singularName": "cliente",
     "pluralName": "clientes",
-    "displayName": "CLIENTE"
+    "displayName": "CLIENTE",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Nombre": {
-      "type": "string"
+    "nombre": {
+      "type": "string",
+      "required": true
     },
-    "Apellido": {
-      "type": "string"
+    "apellido": {
+      "type": "string",
+      "required": true
     },
-    "Correo": {
-      "type": "email"
+    "direccion": {
+      "type": "string",
+      "required": true
     },
-    "Numero": {
-      "type": "integer"
+    "numero": {
+      "type": "string",
+      "required": true
     },
-    "compras": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::compra.compra",
-      "mappedBy": "cliente"
+    "correo": {
+      "type": "email",
+      "required": true,
+      "unique": true
     }
   }
 }

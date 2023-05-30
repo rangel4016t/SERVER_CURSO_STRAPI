@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "detalle_pedidos",
+  "info": {
+    "singularName": "detalle-pedido",
+    "pluralName": "detalle-pedidos",
+    "displayName": "DETALLE_PEDIDO",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cliente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cliente.cliente"
+    },
+    "id_empanadas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::empanada.empanada",
+      "mappedBy": "detalle_pedido"
+    },
+    "cantidad": {
+      "type": "integer",
+      "required": true
+    },
+    "precio_unitario": {
+      "type": "integer",
+      "required": true
+    },
+    "subtotal": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

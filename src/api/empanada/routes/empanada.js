@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * empanda router
+ * empanada router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::empanda.empanda');
+module.exports = createCoreRouter('api::empanada.empanada');

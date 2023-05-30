@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * compra router
+ * pedido router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::compra.compra');
+module.exports = createCoreRouter('api::pedido.pedido');
